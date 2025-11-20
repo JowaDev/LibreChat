@@ -32,7 +32,6 @@ services:
     container_name: LibreChat-NGINX
     ports:
       - "8030:80"
-      - "4430:443"
     depends_on:
       - api
     restart: always
