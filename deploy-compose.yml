@@ -31,7 +31,7 @@ services:
     image: nginx:1.27.0-alpine
     container_name: LibreChat-NGINX
     ports:
-      - "8030:80"
+      - "8030"
     depends_on:
       - api
     restart: always
