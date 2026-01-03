@@ -2,7 +2,7 @@ services:
   api:
     image: ghcr.io/danny-avila/librechat-dev-api:latest
     container_name: LibreChat-API
-    ports:
+    expose:
       - "3000"
     depends_on:
       - mongodb
