@@ -2,8 +2,8 @@ services:
   api:
     image: ghcr.io/danny-avila/librechat-dev-api:latest
     container_name: LibreChat-API
-    ports:
-      - "3080:3080"
+    expose:
+      - "3000"
     depends_on:
       - mongodb
       - meilisearch
@@ -14,6 +14,7 @@ services:
     env_file:
       - .env
     environment:
+      - PORT=3000
       - HOST=0.0.0.0
       - NODE_ENV=production
       - MONGO_URI=mongodb://mongodb:27017/LibreChat
